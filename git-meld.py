@@ -40,7 +40,7 @@ if __name__ == '__main__':
     if not os.path.exists(file_path):
         parser.error("cannot find current version of file %r" % (file_path))
 
-    temp_file = tempfile.NamedTemporaryFile()
+    temp_file = tempfile.NamedTemporaryFile(suffix=os.path.splitext(file_path)[1])
     temp_file.write(item.data)
     
     try:
