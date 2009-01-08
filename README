@@ -1,0 +1,25 @@
+git-meld.py
+-----------
+
+Use this python script to use any diff tool (including meld) with a git repository.
+
+Usage
+-----
+
+git-meld.py [OPTION] REVISION [REVISION2] FILE
+
+Will compare FILE with the same file at REVISION. If REVISION2 is not given, compares to file in working directory.
+
+Options:
+  -h, --help            show this help message and exit
+  -d DIFFTOOL, --difftool=DIFFTOOL
+                        command to produce diff
+  -r REPO_PATH, --repo_path=REPO_PATH
+                        path of repository
+
+Example
+-------
+
+Use diff to compare README file to HEAD
+
+git-merge.py -d diff HEAD
